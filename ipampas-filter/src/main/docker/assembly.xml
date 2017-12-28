@@ -1,0 +1,15 @@
+<assembly
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+  <id>ipampas-filter</id>
+  <dependencySets>
+    <dependencySet>
+      <includes>
+        <include>org.springframework.boot:ipampas-filter</include>
+      </includes>
+      <outputDirectory>.</outputDirectory>
+      <outputFileNameMapping>ipampas-filter.jar</outputFileNameMapping>
+    </dependencySet>
+  </dependencySets>
+</assembly>
