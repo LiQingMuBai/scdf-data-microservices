@@ -46,7 +46,7 @@ app register --name ipampas-sink --type sink --uri file://Users/young/Desktop/ip
 ### Create Stream
 ```bash
 stream create --name ipampas-converter --definition "read: file --directory=/Users/young/Downloads/inputs --filename-pattern=*.txt --mode=lines | filter: ipampas-filter | processor: ipampas-processor | sink: ipampas-sink"
-```
+
 
 ### Deploy Stream
 ```bash
