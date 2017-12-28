@@ -24,6 +24,7 @@
     <module>ipampas-sink</module>
     <module>local-dataflow-server</module>
     <module>data-flow-shell</module>
+    <module>ipampas-pmml-processor</module>
   </modules>
 
   <build>
