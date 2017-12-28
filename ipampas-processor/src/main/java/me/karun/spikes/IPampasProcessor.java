@@ -6,7 +6,7 @@ import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.integration.annotation.Transformer;
 
 @EnableBinding(Processor.class)
-public class TemperatureProcessor {
+public class IPampasProcessor {
 
   @Transformer(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT)
   public Object convertUnits(final TemperaturePayload payload) {

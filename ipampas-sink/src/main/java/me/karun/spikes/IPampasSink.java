@@ -6,7 +6,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 
 
 @EnableBinding(Sink.class)
-public class TemperatureSink {
+public class IPampasSink {
 
   @StreamListener(Sink.INPUT)
   public void loggerSink(Object msg) {

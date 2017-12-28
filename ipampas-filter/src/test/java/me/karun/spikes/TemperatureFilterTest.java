@@ -36,7 +36,7 @@ public class TemperatureFilterTest {
   public void filterValues_whenValueIsUnderThreshold_shouldReturnFalse() {
     setupThresholdForTest(30);
 
-    assertThat(new TemperatureFilter(repository).filterValues(payload))
+    assertThat(new IPampasilter(repository).filterValues(payload))
       .isFalse();
   }
 
@@ -44,7 +44,7 @@ public class TemperatureFilterTest {
   public void filterValues_whenValueIsOverThreshold_shouldReturnTrue() {
     setupThresholdForTest(10);
 
-    assertThat(new TemperatureFilter(repository).filterValues(payload))
+    assertThat(new IPampasilter(repository).filterValues(payload))
       .isTrue();
   }
 
@@ -52,7 +52,7 @@ public class TemperatureFilterTest {
   public void filterValues_whenValueIsAtThreshold_shouldReturnTrue() {
     setupThresholdForTest(20);
 
-    assertThat(new TemperatureFilter(repository).filterValues(payload))
+    assertThat(new IPampasilter(repository).filterValues(payload))
       .isTrue();
   }
 

@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TemperatureSinkApplication {
+public class IPampasSinkApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(TemperatureSinkApplication.class, args);
+    SpringApplication.run(IPampasSinkApplication.class, args);
   }
 }
