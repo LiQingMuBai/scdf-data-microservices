@@ -11,17 +11,17 @@
     <relativePath>.</relativePath>
   </parent>
 
-  <groupId>me.karun.spikes</groupId>
-  <artifactId>temperature-parent</artifactId>
+  <groupId>com.ipampas.data</groupId>
+  <artifactId>ipampas-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>[Parent] Temperature Apps</name>
-  <description>Sample Temperature conversion</description>
+  <name>[Parent] ipampas Apps</name>
+  <description>Sample ipampas conversion</description>
   <packaging>pom</packaging>
 
   <modules>
-    <module>temperature-processor</module>
-    <module>temperature-filter</module>
-    <module>temperature-sink</module>
+    <module>ipampas-processor</module>
+    <module>ipampas-filter</module>
+    <module>ipampas-sink</module>
   </modules>
 
   <build>
