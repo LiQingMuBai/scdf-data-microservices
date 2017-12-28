@@ -22,6 +22,8 @@
     <module>ipampas-processor</module>
     <module>ipampas-filter</module>
     <module>ipampas-sink</module>
+    <module>local-dataflow-server</module>
+    <module>data-flow-shell</module>
   </modules>
 
   <build>
