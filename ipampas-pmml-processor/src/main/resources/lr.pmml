@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" version="4.3">
+	<Header>
+		<Application name="JPMML-SparkML" version="1.1.5"/>
+		<Timestamp>2017-07-01T06:06:26Z</Timestamp>
+	</Header>
+	<DataDictionary>
+		<DataField name="aa" optype="continuous" dataType="double"/>
+		<DataField name="bb" optype="continuous" dataType="double"/>
+		<DataField name="cc" optype="continuous" dataType="double"/>
+		<DataField name="dd" optype="continuous" dataType="double"/>
+		<DataField name="ee" optype="continuous" dataType="double"/>
+		<DataField name="label" optype="continuous" dataType="double"/>
+	</DataDictionary>
+	<RegressionModel functionName="regression">
+		<MiningSchema>
+			<MiningField name="label" usageType="target"/>
+			<MiningField name="aa"/>
+			<MiningField name="bb"/>
+			<MiningField name="cc"/>
+			<MiningField name="dd"/>
+			<MiningField name="ee"/>
+		</MiningSchema>
+		<RegressionTable intercept="0.47215921119218335">
+			<NumericPredictor name="aa" coefficient="1.9998568623981665"/>
+			<NumericPredictor name="bb" coefficient="1.0000105092727307"/>
+			<NumericPredictor name="cc" coefficient="1.0005438244299985"/>
+			<NumericPredictor name="dd" coefficient="1.00010726902947"/>
+			<NumericPredictor name="ee" coefficient="1.999992966372412"/>
+		</RegressionTable>
+	</RegressionModel>
+</PMML>
