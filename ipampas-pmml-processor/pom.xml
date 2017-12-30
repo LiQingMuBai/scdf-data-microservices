@@ -14,7 +14,7 @@
 	</parent>
 
 	<properties>
-		<start-class>org.springframework.cloud.stream.module.pmml.processor.PmmlProcessorApplication</start-class>
+		<start-class>com.ipampas.etl.pmml.processor.PmmlProcessorApplication</start-class>
 	</properties>
 
 	<dependencies>
