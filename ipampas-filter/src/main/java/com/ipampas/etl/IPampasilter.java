@@ -14,26 +14,23 @@ import javax.annotation.PostConstruct;
 @EnableBinding(Processor.class)
 public class IPampasilter {
 
-  private final FilterConfigRepository repository;
+    private final FilterConfigRepository repository;
 
-  @Autowired
-  public IPampasilter(final FilterConfigRepository repository) {
-    this.repository = repository;
-  }
+    @Autowired
+    public IPampasilter(final FilterConfigRepository repository) {
+        this.repository = repository;
+    }
 
-  @PostConstruct
-  public void init() {
-    repository.save(new FilterConfig(Unit.CELSIUS, 35));
-    repository.save(new FilterConfig(Unit.FAHRENHEIT, 30));
-  }
+    @PostConstruct
+    public void init() {
+        repository.save(new FilterConfig(Unit.CELSIUS, 35));
+        repository.save(new FilterConfig(Unit.FAHRENHEIT, 30));
+    }
 
-  @Filter(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT)
-  public boolean filterValues(final TemperaturePayload payload) {
-    System.out.println("payload = " + payload);
-
-    final FilterConfig filterConfig = repository.findByUnit(payload.getUnit());
-    System.out.println("filterConfig = " + filterConfig);
-
-    return payload.getValue() >= filterConfig.getFilterValue();
-  }
+    @Filter(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT)
+    public boolean filterValues(final TemperaturePayload payload) {
+        final FilterConfig filterConfig = repository.findByUnit(payload.getUnit());
+        boolean filteflag = payload.getValue() >= filterConfig.getFilterValue();
+        return filteflag;
+    }
 }
