@@ -39,13 +39,15 @@ mvn clean install -T2C
 ```bash
 app register --name ipampas-filter --type processor --uri file://Users/young/Desktop/ipampas/ipampas-spring-cloud-data-flow/ipampas-filter/target/ipampas-filter-0.0.1-SNAPSHOT.jar
 app register --name ipampas-processor --type processor --uri file://Users/young/Desktop/ipampas/ipampas-spring-cloud-data-flow/ipampas-processor/target/ipampas-processor-0.0.1-SNAPSHOT.jar
+app register --name ipampas-pmml-processor --type processor --uri file://Users/young/Desktop/ipampas/ipampas-spring-cloud-data-flow/ipampas-sink/target/ipampas-pmml-processor-0.0.1-SNAPSHOT.jar
 app register --name ipampas-sink --type sink --uri file://Users/young/Desktop/ipampas/ipampas-spring-cloud-data-flow/ipampas-sink/target/ipampas-sink-0.0.1-SNAPSHOT.jar
+
 ```       
 
 
 ### Create Stream
 ```bash
-stream create --name ipampas-converter --definition "read: file --directory=/Users/young/Downloads/inputs --filename-pattern=*.txt --mode=lines | filter: ipampas-filter | processor: ipampas-processor | sink: ipampas-sink"
+stream create --name ipampas-converter --definition "read: file --directory=/Users/young/Downloads/inputs --filename-pattern=*.txt --mode=lines | filter: ipampas-filter | processor: ipampas-processor| processor: ipampas-pmml-processor | sink: ipampas-sink"
 ```
 
 ### Deploy Stream
